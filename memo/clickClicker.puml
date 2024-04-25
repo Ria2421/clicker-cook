@@ -7,5 +7,23 @@ participant DB
 
 autonumber
 
+rnote over クライアント:ログイン画面
+
+alt アカウント作成時
+
+クライアント -> サーバー:新規ユーザーID\nパスワード
+rnote over サーバー:入力内容チェック
+サーバー -> DB:ユーザーID\nパスワード
+サーバー -> クライアント:タイトル移行フラグ
+
+end
+
+alt ログイン時
+
+クライアント -> サーバー:ユーザーID\nパスワード
+rnote over サーバー:入力内容チェック
+サーバー -> DB:ユーザーID\nパスワード
+
+end
 
 @enduml
