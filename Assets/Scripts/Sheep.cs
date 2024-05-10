@@ -2,6 +2,7 @@
 // 羊に関する処理 [Sheep.cs]
 // Author:Nakamoto Kenta
 // Data:2024/04/01
+// Updata:2024/05/10
 // ------------------------------------
 using System.Collections;
 using System.Collections.Generic;
@@ -22,6 +23,11 @@ public class Sheep : MonoBehaviour
     /// 毛無の羊画像
     /// </summary>
     [SerializeField] private Sprite cutSheepSprite;
+
+    /// <summary>
+    /// 羊毛プレハブ
+    /// </summary>
+    [SerializeField] private Wool woolPrefab;
 
     //===========
     // メソッド
@@ -46,7 +52,11 @@ public class Sheep : MonoBehaviour
     /// </summary>
     private void Shaving()
     {
+        // 画像の切り替え
         sheepRenderer.sprite = cutSheepSprite;
+
+        // 羊毛画像の生成
+        var wool = Instantiate(woolPrefab, transform.position, transform.rotation);
     }
 
     /// <summary>
