@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepRenderer: {fileID: 1007152370069671285}
   cutSheepSprite: {fileID: 21300000, guid: 46b4b99589c84d64899c903a9be9361d, type: 3}
+  woolPrefab: {fileID: 5404782700147706545, guid: 9ff717260532d9444b3965c050253ba6, type: 3}
 --- !u!60 &1082476660249909241
 PolygonCollider2D:
   m_ObjectHideFlags: 0
